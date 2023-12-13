@@ -16526,15 +16526,82 @@ function footer() {
     });
   }
 }
+
+// Удаление активных классов
+function removeActiveClass(arr, activeClass) {
+  arr.forEach((el) => {
+    el.classList.remove(activeClass);
+  });
+}
+// Табы
+function tabs(linksTab, blocksTab, activeClass) {
+  linksTab.forEach((link) => {
+    link.addEventListener("click", clickTab);
+  });
+  linksTab[0].classList.add(activeClass);
+  blocksTab[0].classList.add(activeClass);
+
+  function clickTab(e) {
+    removeActiveClass(linksTab, activeClass);
+    removeActiveClass(blocksTab, activeClass);
+    this.classList.add(activeClass);
+    blocksTab[linksTab.indexOf(this)].classList.add(activeClass);
+  }
+}
+
 // откртыие попапа по клику
-function openClickPopup(clickedBlock, hiddenBlock) {
+function openClickPopup(parent, clickedBlock, hiddenBlock) {
   $(clickedBlock).click(function (e) {
     $(hiddenBlock).toggleClass("active");
     $(this).toggleClass("active");
   });
+  $(document).mouseup(function (e) {
+    if ($(parent).has(e.target).length === 0) {
+      $(hiddenBlock).removeClass("active");
+      $(clickedBlock).removeClass("active");
+    }
+  });
 }
 
-openClickPopup(".filter__show", ".filter__hidden");
+document.querySelector(".video-reviews__link") &&
+  tabs(
+    Array.from(document.querySelectorAll(".video-reviews__link")),
+    Array.from(document.querySelectorAll(".video-reviews__block")),
+    "active"
+  );
+document.querySelector(".write-review__link") &&
+  tabs(
+    Array.from(document.querySelectorAll(".write-review__link")),
+    Array.from(document.querySelectorAll(".write-review__block")),
+    "active"
+  );
+document.querySelector(".location__link") &&
+  tabs(
+    Array.from(document.querySelectorAll(".location__link")),
+    Array.from(document.querySelectorAll(".location__block")),
+    "active"
+  );
+document.querySelector(".equipment__link") &&
+  tabs(
+    Array.from(document.querySelectorAll(".equipment__link")),
+    Array.from(document.querySelectorAll(".equipment__block")),
+    "active"
+  );
+document.querySelector(".item-info__block") &&
+  tabs(
+    Array.from(document.querySelectorAll(".item-info__link")),
+    Array.from(document.querySelectorAll(".item-info__block")),
+    "active"
+  );
+document.querySelector(".filter") &&
+  openClickPopup(".filter", ".filter__show", ".filter__hidden");
+document.querySelector(".write-review__row") &&
+  openClickPopup(
+    ".write-review__row",
+    ".write-review__button",
+    ".write-review"
+  );
+
 $(".header__address").hover(
   function (e) {
     $(".header__address-hover").addClass("active");
@@ -16604,6 +16671,25 @@ function defaultSwiper(
 }
 
 defaultSwiper(".swiper-video", 2.6, 120, true, true);
+defaultSwiper(
+  ".swiper-recently",
+  4,
+  20,
+  false,
+  false,
+  ".swiper-recently-prev",
+  ".swiper-recently-next"
+);
+
+defaultSwiper(
+  ".swiper-similar",
+  4,
+  20,
+  false,
+  false,
+  ".swiper-similar-prev",
+  ".swiper-similar-next"
+);
 
 defaultSwiper(
   ".swiper-mounth",
@@ -16637,3 +16723,25 @@ defaultSwiper(
 );
 
 defaultSwiper(".swiper-time", 3, 20, true, false, "", "", "vertical", true);
+
+// Слайдер на странице с квартитрой
+
+const itemSlider = document.querySelector(".item-slider");
+const lgContainer = document.getElementById("lg-swipper");
+const thumbsForItemSlider = document.querySelector(".thumbs-slides");
+
+if (itemSlider) {
+  new Swiper(thumbsForItemSlider, {
+    spaceBetween: 15,
+    slidesPerView: 3,
+    navigation: {
+      nextEl: ".swiper-thumbs-next",
+      prevEl: ".swiper-thumbs-prev",
+    },
+  });
+  const slider = new Swiper(itemSlider, {
+    thumbs: {
+      swiper: thumbsForItemSlider,
+    },
+  });
+}

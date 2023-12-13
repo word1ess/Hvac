@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Список страниц</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script defer src="./js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__row">
+                        <div class="header__logo">
+                            <a href="index.html">
+                                <img src="./img/svgicons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                        <div class="header__menu">
+                            <div class="header__top">
+                                <button class="header__address flex gap-3 items-center">
+                                    <div class="btn">
+                                        <img src="./img/svgicons/address.svg" alt="address">
+                                    </div>
+                                    <p class="text-neutral-800 font-medium text-base">73 Canal Street, California, LA</p>
+                                    <div class="header__address-hover">
+                                        We're showing you current address. But you can
+                                        <span>change</span>
+                                        your address.
+                                    </div>
+                                </button>
+                                <div class="header__sale py-2.5 px-8 rounded-lg">
+                                    <p class="text-gradient flex items-center justify-center gap-2.5">
+                                        <span>20%</span>
+                                        Todays special Deal in your city
+                                    </p>
+                                </div>
+                                <a class="header__phone flex gap-3 items-center flex-row-reverse" href="tel: +1-818-888-10-10">
+                                    <div class="btn">
+                                        <img src="./img/svgicons/phone.svg" alt="phone">
+                                    </div>
+                                    <p class="text-neutral-800 font-medium text-base">+1-818-888-10-10</p>
+                                </a>
+                            </div>
+                            <div class="header__bottom">
+                                <nav class="header__links">
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">ABOUT US</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">BEST OFFERS</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">SERVICES</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">REVIEWS</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">EQUIPMENT</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">BLOG</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">PROJECT PHOTOS</a>
+                                </nav>
+                                <a href="#" class="btn text-2xl flex items-center justify-center gap-4 flex-auto">
+                                    Book online now
+                                    <img src="./img/svgicons/24.svg" alt="24">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="content">
+                <article class="intro article">
+                    <div class="container">
+                        <div class="intro__row flex gap-4 ">
+                            <div class="intro__info flex-auto">
+                                <header class="block-header mb-16">
+                                    <h2 class="text-gradient text-2xl font-bold mb-3 ">TESTIMONIALS</h2>
+                                </header>
+                                <main class="rating">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="rating__stars">★★★★★</div>
+                                        <p class="text-gradient text-3xl font-extabold">5.0/4.7</p>
+                                    </div>
+                                    <p class="text-2xl font-extrabold mb-4 uppercase">95% of clients recommend us</p>
+                                    <div class="rating__scores flex flex-col gap-2 mb-16">
+                                        <div class="rating__score flex items-center gap-6">
+                                            <p class="text-xl font-bold">5 star</p>
+                                            <div class="rating__line bg-gradient"></div>
+                                            <p class="text-xl font-bold">(120)</p>
+                                        </div>
+                                        <div class="rating__score flex items-center gap-6">
+                                            <p class="text-xl font-bold">4 star</p>
+                                            <div class="rating__line bg-gradient"></div>
+                                            <p class="text-xl font-bold">(120)</p>
+                                        </div>
+                                        <div class="rating__score flex items-center gap-6">
+                                            <p class="text-xl font-bold">3 star</p>
+                                            <div class="rating__line bg-gradient"></div>
+                                            <p class="text-xl font-bold">(120)</p>
+                                        </div>
+                                        <div class="rating__score flex items-center gap-6">
+                                            <p class="text-xl font-bold">2 star</p>
+                                            <div class="rating__line bg-gradient"></div>
+                                            <p class="text-xl font-bold">(120)</p>
+                                        </div>
+                                        <div class="rating__score flex items-center gap-6">
+                                            <p class="text-xl font-bold">1 star</p>
+                                            <div class="rating__line bg-gradient"></div>
+                                            <p class="text-xl font-bold">(120)</p>
+                                        </div>
+                                    </div>
+                                </main>
+                                <button class="write-review__button btn text-3xl mt-auto">Write a review</button>
+                            </div>
+                            <div class="intro__img overflow-hidden rounded-xl">
+                                <img src="./img/index/intro.png" alt="intro">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <section class="video-reviews pb-10">
+                    <div class="container">
+                        <nav class="video-reviews__nav flex mb-8 gap-6">
+                            <div class="filter relative mr-12">
+                                <div class="filter__show flex gap-4 items-center cursor-pointer">
+                                    <img src="./img/svgicons/filter.svg" alt="filter">
+                                    <p class="text-lg font-bold">Filter</p>
+                                </div>
+                                <div class="filter__hidden px-6 py-3">
+                                    <div class="filter__type">
+                                        <p class="font-bold mb-3">By year</p>
+                                        <input type="text" placeholder="2010" class="mb-10">
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2010</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2010</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2010</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2010</p>
+                                        </label>
+                                    </div>
+                                    <div class="filter__type pt-6">
+                                        <p class="font-bold mb-3">By services</p>
+                                        <input type="text" placeholder="2010" class="mb-10">
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2010</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2010</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2010</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2010</p>
+                                        </label>
+                                    </div>
+                                    <div class="filter__type pt-6">
+                                        <p class="font-bold mb-3">By stars</p>
+                                        <input type="text" placeholder="2010" class="mb-10">
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>5</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>4</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>3</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>2</p>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                            <p>1</p>
+                                        </label>
+                                    </div>
+                                    <button class="btn">save</button>
+                                </div>
+                            </div>
+                            <button class="video-reviews__link">All</button>
+                            <button class="video-reviews__link">Photo review</button>
+                            <button class="video-reviews__link">Video review</button>
+                        </nav>
+                        <main class="video-reviews__row mb-20">
+                            <div class="video-reviews__block gap-10">
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/1.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-reviews__block gap-10">
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/2.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/2.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/2.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-reviews__block gap-10">
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/3.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/3.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/3.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/3.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/3.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                                <div class="video-reviews__review">
+                                    <div class="video-reviews__video rounded-xl relative overflow-hidden mb-8">
+                                        <img src="./img/engineers/3.png" alt="1">
+                                    </div>
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                        <footer class="page-pagination relative flex gap-6 items-center m-0 m-auto">
+                            <div class="swiper-button-prev"></div>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <p>.</p>
+                            <p>.</p>
+                            <a href="#">16</a>
+                            <div class="swiper-button-next"></div>
+                        </footer>
+                    </div>
+                </section>
+                <section class="text-reviews section bg-grey ">
+                    <div class="container">
+                        <div class="text-reviews__row grid gap-20 mb-20">
+                            <div class="text-review__review">
+                                <p class="leading-10 text-xl mb-6">My second time using them. They are quick to respond, very nice, and have reasonable prices. I will definitely be calling them in the future with any of my home hvac needs/repairs.</p>
+                                <div class="pl-6">
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-review__review">
+                                <p class="leading-10 text-xl mb-6">My second time using them. They are quick to respond, very nice, and have reasonable prices. I will definitely be calling them in the future with any of my home hvac needs/repairs.</p>
+                                <div class="pl-6">
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-review__review">
+                                <p class="leading-10 text-xl mb-6">My second time using them. They are quick to respond, very nice, and have reasonable prices. I will definitely be calling them in the future with any of my home hvac needs/repairs.</p>
+                                <div class="pl-6">
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-review__review">
+                                <p class="leading-10 text-xl mb-6">My second time using them. They are quick to respond, very nice, and have reasonable prices. I will definitely be calling them in the future with any of my home hvac needs/repairs.</p>
+                                <div class="pl-6">
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-review__review">
+                                <p class="leading-10 text-xl mb-6">My second time using them. They are quick to respond, very nice, and have reasonable prices. I will definitely be calling them in the future with any of my home hvac needs/repairs.</p>
+                                <div class="pl-6">
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-review__review">
+                                <p class="leading-10 text-xl mb-6">My second time using them. They are quick to respond, very nice, and have reasonable prices. I will definitely be calling them in the future with any of my home hvac needs/repairs.</p>
+                                <div class="pl-6">
+                                    <p class="swiper-vertical-three__name">Ashley R.</p>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="text-4xl">☆☆☆☆☆</p>
+                                        <p class="text-gradient text-3xl">4.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="page-pagination relative flex gap-6 items-center m-0 m-auto">
+                            <div class="swiper-button-prev"></div>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <p>.</p>
+                            <p>.</p>
+                            <a href="#">16</a>
+                            <div class="swiper-button-next"></div>
+                        </footer>
+                    </div>
+                </section>
+                <article class="map">
+                    <div class="container">
+                        <header class="block-header mb-16 m-0 m-auto text-center">
+                            <h3 class="text-gradient text-2xl font-bold mb-3 ">OUR WORKS</h3>
+                            <h2 class="font-bold text-6xl mb-3">Our latest project locations</h2>
+                            <p class="text-2xl">We offer a wide range of HVAC services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts.</p>
+                        </header>
+                    </div>
+                    <img src="./img/map.png" alt="map">
+                </article>
+            </main>
+            <aside class="write-review flex justify-end fixed">
+                <div class="write-review__row bg-white p-20">
+                    <nav class="write-review__nav flex justify-between items-center gap-2 pb-5 mb-5">
+                        <h2 class="text-4xl font-bold">Write a review</h2>
+                        <div class="flex gap-6">
+                            <button class="write-review__link text-xl font-bold">Review</button>
+                            <button class="write-review__link text-xl font-bold">Video review</button>
+                        </div>
+                    </nav>
+                    <main class="write-review__bloks">
+                        <div class="write-review__block">
+                            <label class="flex flex-col gap-6 mb-10">
+                                <h3 class="text-xl font-bold uppercase">Full Name</h3>
+                                <input type="text" name="name" placeholder="Enter your full name">
+                            </label>
+                            <label class="flex flex-col gap-6 mb-10">
+                                <h3 class="text-xl font-bold uppercase">
+                                    Product Rating
+                                </h3>
+                                <div class="write-review__stars">
+                                    <p>Features</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                                <div class="write-review__stars">
+                                    <p>Quality</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                                <div class="write-review__stars">
+                                    <p>Performance</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                                <div class="write-review__stars">
+                                    <p>Value</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                            </label>
+                            <label class="flex flex-col gap-6 mb-10">
+                                <h3 class="text-xl font-bold uppercase">Full Name</h3>
+                                <p>Determined by averaging the above Product Ratings</p>
+                                <div class="write-review__stars">
+                                    <p>Features</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                            </label>
+                            <label>
+                                <h3 class="text-xl font-bold uppercase">Full Name</h3>
+                                <input type="text">
+                            </label>
+                            <button class="btn">Submit  review</button>
+                        </div>
+                        <div class="write-review__block">
+                            <label class="flex flex-col gap-6 mb-10">
+                                <h3 class="text-xl font-bold uppercase">Full Name</h3>
+                                <input type="text" name="name" placeholder="Enter your full name">
+                            </label>
+                            <label class="flex flex-col gap-6 mb-10">
+                                <h3 class="text-xl font-bold uppercase">
+                                    Product Rating
+                                </h3>
+                                <div class="write-review__stars">
+                                    <p>Features</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                                <div class="write-review__stars">
+                                    <p>Quality</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                                <div class="write-review__stars">
+                                    <p>Performance</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                                <div class="write-review__stars">
+                                    <p>Value</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                            </label>
+                            <label class="flex flex-col gap-6 mb-10">
+                                <h3 class="text-xl font-bold uppercase">Full Name</h3>
+                                <p>Determined by averaging the above Product Ratings</p>
+                                <div class="write-review__stars">
+                                    <p>Features</p>
+                                    <div>☆☆☆☆☆</div>
+                                </div>
+                            </label>
+                            <label class="flex flex-col gap-6 mb-10">
+                                <h3 class="text-xl font-bold uppercase">Your Review</h3>
+                                <textarea name="review" placeholder="Write review"></textarea>
+                            </label>
+                            <button class="btn">Submit review</button>
+                        </div>
+                    </main>
+                </div>
+            </aside>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__row">
+                        <div class="footer__item">
+                            <h3 class="footer__title">
+                                About
+                            </h3>
+                            <p class="text-base leading-10 mb-16">
+                                We are an award winning HVAC company with over 10+ years experience in the business. We provide a wide range of services for both residential and commercial clients.
+                            </p>
+                            <div class="footer__social flex gap-6">
+                                <a href="#" class="footer__link">
+                                    <img src="./img/svgicons/faccebook-small.svg" alt="faccebook">
+                                </a>
+                                <a href="#" class="footer__link">
+                                    <img src="./img/svgicons/gmail.svg" alt="gmail">
+                                </a>
+                                <a href="#" class="footer__link">
+                                    <img src="./img/svgicons/yelp-small.svg" alt="yelp">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__title">
+                                Contacts
+                            </div>
+                            <nav class="footer__nav">
+                                <a href="#">
+                                    <img src="./img/svgicons/address.svg" alt="address">
+                                    <div>
+                                        <p>Address</p>
+                                        <b>73 Canal Street, New York, Los</b>
+                                    </div>
+                                </a>
+                                <a href="tel:+1 555 23 12">
+                                    <img src="./img/svgicons/phone.svg" alt="phone">
+                                    <div>
+                                        <p>Phone number</p>
+                                        <b>+1 555 23 12</b>
+                                    </div>
+                                </a>
+                                <a href="mailto:example@example.com">
+                                    <img src="./img/svgicons/mail.svg" alt="mail">
+                                    <div>
+                                        <p>E-mail</p>
+                                        <b>example@example.com</b>
+                                    </div>
+                                </a>
+                            </nav>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__title">
+                                Quic links
+                            </div>
+                            <nav class="footer__nav">
+                                <a href="#" class="font-bold">About us</a>
+                                <a href="#" class="font-bold">Services</a>
+                                <a href="#" class="font-bold">News</a>
+                                <a href="#" class="font-bold">Location</a>
+                                <a href="#" class="font-bold">Contacts</a>
+                            </nav>
+                        </div>
+                        <div class="footer__logo">
+                            <img src="./img/svgicons/logo-footer.svg" alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
