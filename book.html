@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Book</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script defer src="./js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__row">
+                        <div class="header__logo">
+                            <a href="index.html">
+                                <img src="./img/svgicons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                        <div class="header__menu">
+                            <div class="header__top">
+                                <button class="header__address flex gap-3 items-center">
+                                    <div class="btn">
+                                        <img src="./img/svgicons/address.svg" alt="address">
+                                    </div>
+                                    <p class="text-neutral-800 font-medium text-base">73 Canal Street, California, LA</p>
+                                    <div class="header__address-hover">
+                                        We're showing you current address. But you can
+                                        <span>change</span>
+                                        your address.
+                                    </div>
+                                </button>
+                                <div class="header__sale py-2.5 px-8 rounded-lg">
+                                    <p class="text-gradient flex items-center justify-center gap-2.5">
+                                        <span>20%</span>
+                                        Todays special Deal in your city
+                                    </p>
+                                </div>
+                                <a class="header__phone flex gap-3 items-center flex-row-reverse" href="tel: +1-818-888-10-10">
+                                    <div class="btn">
+                                        <img src="./img/svgicons/phone.svg" alt="phone">
+                                    </div>
+                                    <p class="text-neutral-800 font-medium text-base">+1-818-888-10-10</p>
+                                </a>
+                            </div>
+                            <div class="header__bottom">
+                                <nav class="header__links">
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">ABOUT US</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">BEST OFFERS</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">SERVICES</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">REVIEWS</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">EQUIPMENT</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">BLOG</a>
+                                    <a href="#" class="text-neutral-800 font-bold text-lg uppercase">PROJECT PHOTOS</a>
+                                </nav>
+                                <a href="#" class="btn text-2xl flex items-center justify-center gap-4 flex-auto">
+                                    Book online now
+                                    <img src="./img/svgicons/24.svg" alt="24">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="content">
+                <article class="intro article">
+                    <div class="container">
+                        <div class="intro__row flex gap-4 items-center">
+                            <div class="intro__info flex-auto">
+                                <header class="block-header">
+                                    <h3 class="text-gradient text-2xl font-bold mb-3 ">BOOK NOW</h3>
+                                    <h2 class="font-bold text-6xl mb-3">Our team is always happy to help you</h2>
+                                </header>
+                            </div>
+                            <div class="intro__img overflow-hidden rounded-xl">
+                                <img src="./img/index/intro.png" alt="intro">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <section class="book section">
+                    <div class="container">
+                        <form action="#" class="book__inputs">
+                            <h3 class="text-4xl font-medium mb-12">Fill out the form and we will come as soon as possible.</h3>
+                            <label class="flex gap-12 mb-16">
+                                <p class="text-3xl font-bold">
+                                    Name
+                                    <span class="text-red">*</span>
+                                </p>
+                                <div class="book__input flex flex-col gap-12">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Johne Doe"
+                                        required
+                                    >
+                                </div>
+                            </label>
+                            <label class="flex gap-12  mb-16">
+                                <p class="text-3xl font-bold">
+                                    Phone
+                                    <span class="text-red">*</span>
+                                </p>
+                                <div class="book__input flex flex-col gap-12">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="818 545 12 23"
+                                        required
+                                    >
+                                </div>
+                            </label>
+                            <label class="flex gap-12  mb-16">
+                                <p class="text-3xl font-bold">
+                                    E-mail
+                                    <span class="text-red">*</span>
+                                </p>
+                                <div class="book__input flex flex-col gap-12">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="example@example.com"
+                                        required
+                                    >
+                                </div>
+                            </label>
+                            <label class="flex gap-12  mb-16">
+                                <p class="text-3xl font-bold">
+                                    Address
+                                    <span class="text-red">*</span>
+                                </p>
+                                <div class="book__input flex flex-col gap-12">
+                                    <input
+                                        type="text"
+                                        name="address"
+                                        placeholder="12532 Weliam ave, Glendael, CA 92505"
+                                        required
+                                    >
+                                </div>
+                            </label>
+                            <label class="flex gap-12 mb-16">
+                                <p class="text-3xl font-bold">
+                                    Service
+                                </p>
+                                <div class="book__input flex flex-col gap-12">
+                                    <input type="text" name="service" placeholder="Heating Repair, AC Repair, ...">
+                                    <input type="text" name="service" placeholder="I'm a owner, I'm manager, Paymner">
+                                </div>
+                            </label>
+                            <button type="submit" class="btn__bordered text-3xl m-0 m-auto">Next</button>
+                        </form>
+                        <div class="book__date">
+                            <h3 class="text-4xl font-medium mb-12 text-center">Choose day and time</h3>
+                            <div class="swiper swiper-mounth mb-12">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        February
+                                    </div>
+                                    <div class="swiper-slide">
+                                        March
+                                    </div>
+                                    <div class="swiper-slide">
+                                        April
+                                    </div>
+                                    <div class="swiper-slide">
+                                        June
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev swiper-mounth-prev"></div>
+                                <div class="swiper-button-next swiper-mounth-next"></div>
+                            </div>
+                            <div class="swiper swiper-day">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl font-bold text-center">Monday</p>
+                                        <p class="text-gradient text-2xl text-center">20</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl font-bold text-center">Monday</p>
+                                        <p class="text-gradient text-2xl text-center">20</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl font-bold text-center">Monday</p>
+                                        <p class="text-gradient text-2xl text-center">20</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl font-bold text-center">Monday</p>
+                                        <p class="text-gradient text-2xl text-center">20</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl font-bold text-center">Monday</p>
+                                        <p class="text-gradient text-2xl text-center">20</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl font-bold text-center">Monday</p>
+                                        <p class="text-gradient text-2xl text-center">20</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev swiper-day-prev"></div>
+                                <div class="swiper-button-next swiper-day-next"></div>
+                            </div>
+                            <p class="text-2xl font-medium mb-12 text-center">Select time for Monday, February 20</p>
+                            <div class="swiper swiper-time mb-12">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl text-center">8 am - 11 am</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl text-center">11 am - 2 pm</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl text-center">2 pm - 5 pm</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="text-2xl text-center">5 pm - 8 pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea name="comment" placeholder="Comment" class="mb-16"></textarea>
+                            <div class="grid gap-4">
+                                <button class="btn__bordered text-3xl m-0 m-auto">Back</button>
+                                <button class="btn text-3xl m-0 m-auto">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__row">
+                        <div class="footer__item">
+                            <h3 class="footer__title">
+                                About
+                            </h3>
+                            <p class="text-base leading-10 mb-16">
+                                We are an award winning HVAC company with over 10+ years experience in the business. We provide a wide range of services for both residential and commercial clients.
+                            </p>
+                            <div class="footer__social flex gap-6">
+                                <a href="#" class="footer__link">
+                                    <img src="./img/svgicons/faccebook-small.svg" alt="faccebook">
+                                </a>
+                                <a href="#" class="footer__link">
+                                    <img src="./img/svgicons/gmail.svg" alt="gmail">
+                                </a>
+                                <a href="#" class="footer__link">
+                                    <img src="./img/svgicons/yelp-small.svg" alt="yelp">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__title">
+                                Contacts
+                            </div>
+                            <nav class="footer__nav">
+                                <a href="#">
+                                    <img src="./img/svgicons/address.svg" alt="address">
+                                    <div>
+                                        <p>Address</p>
+                                        <b>73 Canal Street, New York, Los</b>
+                                    </div>
+                                </a>
+                                <a href="tel:+1 555 23 12">
+                                    <img src="./img/svgicons/phone.svg" alt="phone">
+                                    <div>
+                                        <p>Phone number</p>
+                                        <b>+1 555 23 12</b>
+                                    </div>
+                                </a>
+                                <a href="mailto:example@example.com">
+                                    <img src="./img/svgicons/mail.svg" alt="mail">
+                                    <div>
+                                        <p>E-mail</p>
+                                        <b>example@example.com</b>
+                                    </div>
+                                </a>
+                            </nav>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__title">
+                                Quic links
+                            </div>
+                            <nav class="footer__nav">
+                                <a href="#" class="font-bold">About us</a>
+                                <a href="#" class="font-bold">Services</a>
+                                <a href="#" class="font-bold">News</a>
+                                <a href="#" class="font-bold">Location</a>
+                                <a href="#" class="font-bold">Contacts</a>
+                            </nav>
+                        </div>
+                        <div class="footer__logo">
+                            <img src="./img/svgicons/logo-footer.svg" alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
