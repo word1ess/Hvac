@@ -101,6 +101,24 @@
                         <main class="equipment__row flex gap-6">
                             <aside class="equipment__aside px-6 py-3">
                                 <div class="filter__type">
+                                    <div class="section-params__range-sliders">
+                                        <div class="budget range-slider rangeSlider">
+                                            <p class="font-bold mb-3">By price</p>
+                                            <div class="section-params__name"></div>
+                                            <div class="row-bottom">
+                                                <div
+                                                    id="rangeslider"
+                                                    class="rangeslider"
+                                                    data-min="0"
+                                                    data-max="100"
+                                                ></div>
+                                                <div class="range-inputs__row">
+                                                    <input id="rangeMin" class="from" name="budget_from">
+                                                    <input id="rangeMax" class="to" name="budget_to">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <p class="font-bold mb-3">By year</p>
                                     <input type="text" placeholder="2010" class="mb-10">
                                     <label class="checkbox">
