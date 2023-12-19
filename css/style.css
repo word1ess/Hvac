@@ -3867,8 +3867,9 @@ a.ui-button:active,
   z-index: -1;
 }
 .header__address-hover.active{
-  top: 4rem;
+  top: 0px;
   opacity: 1;
+  margin-top: 50px;
   z-index: 2;
 }
 .header__sale{
@@ -3983,7 +3984,9 @@ a {
 }
 
 input,
-textarea {
+textarea,
+.custom-select__header,
+.custom-select__body {
   display: block;
   width: 100%;
   padding: 20px 40px !important;
@@ -3994,15 +3997,75 @@ textarea {
   border: 1px solid #bcbcbc !important;
 }
 input:focus,
-textarea:focus {
+textarea:focus,
+.custom-select__header:focus,
+.custom-select__body:focus {
   border-color: #dc5435 !important;
 }
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder, .custom-select__header::-moz-placeholder, .custom-select__body::-moz-placeholder {
   color: #bcbcbc;
 }
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+.custom-select__header::placeholder,
+.custom-select__body::placeholder {
   color: #bcbcbc;
+}
+
+.custom-select {
+  position: relative;
+  z-index: 4;
+}
+
+.custom-select__header {
+  position: relative;
+  cursor: pointer;
+}
+.custom-select__header::after, .custom-select__header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 20px;
+  height: 2px;
+  background: #828282;
+  rotate: -45deg;
+  transition: all 300ms ease;
+}
+.custom-select__header::before {
+  right: 29px;
+  rotate: 45deg;
+}
+.custom-select__header.active::after, .custom-select__header.active::before {
+  background: #dc5435;
+  rotate: 45deg;
+}
+.custom-select__header.active::before {
+  rotate: -45deg;
+}
+
+.custom-select__option {
+  cursor: pointer;
+}
+.custom-select__option:hover {
+  color: #dc5435;
+}
+
+.custom-select__body {
+  display: none;
+}
+.custom-select__body p {
+  flex: none !important;
+  padding: 0px !important;
+}
+.custom-select__body.active {
+  display: flex;
+  position: absolute;
+  z-index: 4;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 12px;
+  background: #fff;
 }
 
 .custom-file {
@@ -4033,6 +4096,13 @@ textarea::placeholder {
 .custom-file .place.active,
 .custom-file video.active {
   display: flex;
+  border-radius: 12px;
+  width: 6px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 .custom-file .close {
   display: none;
@@ -4041,7 +4111,7 @@ textarea::placeholder {
   height: 40px;
   border-radius: 50%;
   border: 1px solid #dc5435;
-  background: rgba(242, 152, 74, 0.6235294118);
+  background: #f2994a;
   top: 55px;
   right: 15px;
   z-index: 10;
@@ -4107,6 +4177,9 @@ textarea::placeholder {
   max-width: fit-content;
   color: #fff;
   text-decoration: none;
+}
+.btn__mobile {
+  display: none;
 }
 
 .btn__bordered{
@@ -4390,7 +4463,7 @@ textarea::placeholder {
 }
 
 .swiper-day {
-  width: 790px;
+  width: 900px;
   margin: 0 auto;
   margin-bottom: 60px;
   position: relative;
@@ -4459,6 +4532,10 @@ textarea::placeholder {
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: #dc5435;
+}
+
+.intro {
+  padding: 0px 0px 70px;
 }
 
 .special__item__bordered{
@@ -4602,6 +4679,13 @@ textarea::placeholder {
   flex: 0 0 130px;
   padding: 20px 0px 0px;
 }
+.book__inputs {
+  position: relative;
+  z-index: 4;
+}
+.book__inputs label {
+  justify-content: center;
+}
 .book__input {
   max-width: 566px;
   width: 100%;
@@ -4624,7 +4708,7 @@ textarea::placeholder {
   }
 }
 .book__date {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0px auto;
 }
 .book__date textarea {
@@ -5445,12 +5529,6 @@ body {
   }
 }
 @media only screen and (max-width: 1280px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100000;
-  }
   .header__logo {
     margin: 0px;
   }
@@ -5489,6 +5567,12 @@ body {
   }
 }
 @media only screen and (max-width: 992px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+  }
   .header::before {
     content: "";
     position: absolute;
@@ -5596,6 +5680,10 @@ body {
   }
   .header__phone {
     flex-direction: row;
+  }
+  .btn__mobile {
+    display: flex;
+    font-size: 16px;
   }
   .content {
     padding: 60px 0px 0px;
@@ -5894,6 +5982,14 @@ body {
   }
 }
 @media only screen and (max-width: 450px) {
+  .btn__mobile {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+  .btn__mobile img {
+    width: 24px;
+    height: 24px;
+  }
   .video-reviews__nav {
     flex-wrap: wrap;
   }

@@ -29133,6 +29133,30 @@ function openClickPopup(parent, clickedBlock, hiddenBlock) {
   });
 }
 
+function clickForCustomSelect(parent) {
+  const header = parent.querySelector(".custom-select__header");
+  const body = parent.querySelector(".custom-select__body");
+  const options = Array.from(body.querySelectorAll(".custom-select__option"));
+
+  header.addEventListener("click", (e) => {
+    header.classList.toggle("active");
+    body.classList.toggle("active");
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      parent.dataset.curroption = option.textContent;
+      header.textContent = option.textContent;
+      header.classList.remove("active");
+      body.classList.remove("active");
+    });
+  });
+}
+
+const customSelect = document.querySelector(".custom-select");
+
+customSelect && clickForCustomSelect(customSelect);
+
 document.querySelector(".video-reviews__link") &&
   tabs(
     Array.from(document.querySelectorAll(".video-reviews__link")),
@@ -29314,6 +29338,7 @@ function defaultSwiper(
   loop = false,
   prevEl,
   nextEl,
+  loopedSlides = false,
   direction = "horizontal",
   releaseOnEdges = false
 ) {
@@ -29340,10 +29365,31 @@ function defaultSwiper(
         spaceBetween,
       },
     },
+    loopedSlides,
   });
 }
 
-defaultSwiper(".swiper-video", 2.6, 120, true, true);
+defaultSwiper(".swiper-video", 3, 120, true, true, "", "", true);
+new Swiper(".swiper-video", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  centeredSlides: true,
+  loop: true,
+  mousewheel: {
+    releaseOnEdges: true,
+  },
+  breakpoints: {
+    577: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 120,
+    },
+  },
+  loopedSlides: true,
+});
 defaultSwiper(
   ".swiper-recently",
   4,
@@ -29392,10 +29438,22 @@ defaultSwiper(
   false,
   ".swiper-vertical-three-prev",
   ".swiper-vertical-three-next",
+  false,
   "vertical"
 );
 
-defaultSwiper(".swiper-time", 3, 20, true, false, "", "", "vertical", true);
+defaultSwiper(
+  ".swiper-time",
+  3,
+  20,
+  true,
+  false,
+  "",
+  "",
+  false,
+  "vertical",
+  true
+);
 
 // Слайдер на странице с квартитрой
 
