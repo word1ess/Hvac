@@ -4699,7 +4699,11 @@ textarea::placeholder,
   justify-content: center;
 }
 .book__inputs label.checkbox {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
   justify-content: flex-start;
+  margin-bottom: 16px;
 }
 .book__input {
   max-width: 566px;
@@ -5582,23 +5586,6 @@ body {
   }
 }
 @media only screen and (max-width: 992px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100000;
-  }
-  .header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: #fff;
-    border-bottom: 2px solid #dc5435;
-  }
   .header__logo a {
     position: relative;
     z-index: 10;
@@ -5838,7 +5825,7 @@ body {
     font-size: 14px;
   }
   .content {
-    padding-top: 90px;
+    padding-top: 20px;
   }
   .section,
   .article {
@@ -5962,6 +5949,9 @@ body {
   }
 }
 @media only screen and (max-width: 576px) {
+  .swiper-grid > .swiper-wrapper {
+    flex-wrap: nowrap;
+  }
   .customers .swiper-vertical-three {
     min-height: 200px;
     max-height: 200px;
