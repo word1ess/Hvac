@@ -4431,6 +4431,9 @@ textarea::placeholder,
 .swiper-video .swiper-slide-active {
   scale: 1.4;
 }
+.swiper-video-pagination {
+  display: none;
+}
 
 .swiper-mounth {
   height: 100px;
@@ -4503,13 +4506,13 @@ textarea::placeholder,
 }
 
 .swiper-time {
-  height: 180px;
-  max-height: 180px;
+  height: 280px;
+  max-height: 280px;
 }
 .swiper-time .swiper-slide.swiper-slide-active {
   color: #dc5435;
 }
-.swiper-time .swiper-slide.swiper-slide-next, .swiper-time .swiper-slide.swiper-slide-prev {
+.swiper-time .swiper-slide, .swiper-time .swiper-slide {
   color: #d9d9d9;
 }
 
@@ -4532,6 +4535,10 @@ textarea::placeholder,
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: #dc5435;
+}
+
+.swiper-pagination-bullet-active {
+  background: #dc5435;
 }
 
 .intro {
@@ -4679,12 +4686,20 @@ textarea::placeholder,
   flex: 0 0 130px;
   padding: 20px 0px 0px;
 }
+.book label.checkbox p {
+  flex: none;
+  padding: 0px;
+  justify-content: flex-start;
+}
 .book__inputs {
   position: relative;
   z-index: 4;
 }
 .book__inputs label {
   justify-content: center;
+}
+.book__inputs label.checkbox {
+  justify-content: flex-start;
 }
 .book__input {
   max-width: 566px;
@@ -5980,8 +5995,25 @@ body {
   .write-review__nav h2 {
     flex: 1 1 100%;
   }
+  .swiper-video-pagination {
+    display: block;
+  }
 }
 @media only screen and (max-width: 450px) {
+  .book label p {
+    font-size: 22px;
+  }
+  .book label.checkbox p::before,
+  .book label.checkbox p::after {
+    top: 2.5px;
+  }
+  input,
+  textarea,
+  .custom-select__header,
+  .custom-select__body {
+    font-size: 19px !important;
+    padding: 10px 20px !important;
+  }
   .btn__mobile {
     font-size: 12px;
     padding: 10px 15px;

@@ -29153,9 +29153,12 @@ function clickForCustomSelect(parent) {
   });
 }
 
-const customSelect = document.querySelector(".custom-select");
+const customSelects = Array.from(document.querySelectorAll(".custom-select"));
 
-customSelect && clickForCustomSelect(customSelect);
+customSelects[0] &&
+  customSelects.forEach((select) => {
+    clickForCustomSelect(select);
+  });
 
 document.querySelector(".video-reviews__link") &&
   tabs(
@@ -29338,9 +29341,9 @@ function defaultSwiper(
   loop = false,
   prevEl,
   nextEl,
-  loopedSlides = false,
   direction = "horizontal",
-  releaseOnEdges = false
+  releaseOnEdges = false,
+  pag = ""
 ) {
   new Swiper(slider, {
     slidesPerView: 1,
@@ -29350,6 +29353,9 @@ function defaultSwiper(
     navigation: {
       nextEl,
       prevEl,
+    },
+    pagination: {
+      el: pag,
     },
     direction,
     mousewheel: {
@@ -29365,31 +29371,32 @@ function defaultSwiper(
         spaceBetween,
       },
     },
-    loopedSlides,
   });
 }
 
-defaultSwiper(".swiper-video", 3, 120, true, true, "", "", true);
-new Swiper(".swiper-video", {
-  slidesPerView: 1,
-  spaceBetween: 15,
-  centeredSlides: true,
-  loop: true,
-  mousewheel: {
-    releaseOnEdges: true,
-  },
-  breakpoints: {
-    577: {
-      slidesPerView: 1,
-      spaceBetween: 30,
-    },
-    769: {
-      slidesPerView: 3,
-      spaceBetween: 120,
-    },
-  },
-  loopedSlides: true,
-});
+defaultSwiper(
+  ".swiper-video",
+  2.6,
+  120,
+  true,
+  true,
+  "",
+  "",
+  "horizontal",
+  false,
+  ".swiper-video-pagination"
+);
+defaultSwiper(
+  ".swiper-video",
+  2.6,
+  120,
+  true,
+  true,
+  "",
+  "",
+  "horizontal",
+  false
+);
 defaultSwiper(
   ".swiper-recently",
   4,
@@ -29438,22 +29445,19 @@ defaultSwiper(
   false,
   ".swiper-vertical-three-prev",
   ".swiper-vertical-three-next",
-  false,
   "vertical"
 );
 
-defaultSwiper(
-  ".swiper-time",
-  3,
-  20,
-  true,
-  false,
-  "",
-  "",
-  false,
-  "vertical",
-  true
-);
+new Swiper(".swiper-time", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: false,
+  direction: "vertical",
+  mousewheel: {
+    releaseOnEdges: true,
+  },
+});
 
 // Слайдер на странице с квартитрой
 
