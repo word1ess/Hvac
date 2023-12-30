@@ -4322,6 +4322,19 @@ textarea::placeholder,
   z-index: 2;
   transition: all 300ms ease;
 }
+.checkbox__without p{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.checkbox__without p::after, .checkbox__without p::before {
+  display: none;
+}
+.checkbox__without .custom-checkbox:checked + p {
+  color: #dc5435;
+}
+.checkbox__without .custom-checkbox:disabled + p {
+  color: #b3bcc5;
+}
 
 .custom-checkbox {
   position: absolute;
