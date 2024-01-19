@@ -29108,6 +29108,9 @@ if (window.screen.width < 992) {
       $(".has-submenu").next().removeClass("active");
     }
   );
+  $(".submenu").hover(function (e) {
+    $(this).addClass("active");
+  });
 }
 
 $(".ui-slider-handle").draggable();

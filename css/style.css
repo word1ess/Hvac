@@ -3956,21 +3956,27 @@ a.ui-button:active,
 
 .submenu {
   display: none;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 26px;
   max-width: 700px;
-  border-radius: 10px;
-  border: 1px solid rgba(4, 51, 109, 0.2);
-  background: #fff;
-  padding: 30px 65px;
   position: absolute;
-  transform: translate(-20%, 15px);
+  transform: translate(-20%, -10px);
   left: -50%;
+  padding-top: 25px;
   /* Drop Shadow */
-  box-shadow: 0px 10px 30px 0px rgba(215, 215, 215, 0.35);
 }
 .submenu.active {
+  display: block;
+}
+.submenu__row {
   display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  border-radius: 10px;
+  border: 1px solid rgba(4, 51, 109, 0.2);
+  box-shadow: 0px 10px 30px 0px rgba(215, 215, 215, 0.35);
+  background: #fff;
+  padding: 30px 65px;
+  width: 100%;
+  max-width: 700px;
 }
 .submenu a {
   color: #252525;
