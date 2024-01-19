@@ -29088,11 +29088,26 @@ var Swiper = (function () {
 $(".header__burger").click(function name(event) {
   $(".header__burger, .header__menu").toggleClass("burger-active");
 });
-// подвал
+$(".submenu").prev().addClass("has-submenu");
 if (window.screen.width < 992) {
   $(".block__title").click(function name(event) {
     $(this).toggleClass("footer-active").next().slideToggle(300);
   });
+  $(".has-submenu").click(function (e) {
+    $(this).toggleClass("active");
+    $(this).next().toggleClass("active");
+  });
+} else {
+  $(".header__link").hover(
+    function (e) {
+      $(".has-submenu").addClass("active");
+      $(".has-submenu").next().addClass("active");
+    },
+    function (e) {
+      $(".has-submenu").removeClass("active");
+      $(".has-submenu").next().removeClass("active");
+    }
+  );
 }
 
 $(".ui-slider-handle").draggable();
@@ -29124,6 +29139,10 @@ function openClickPopup(parent, clickedBlock, hiddenBlock) {
   $(clickedBlock).click(function (e) {
     $(hiddenBlock).toggleClass("active");
     $(this).toggleClass("active");
+  });
+  $(".close").click(function (e) {
+    $(hiddenBlock).removeClass("active");
+    $(clickedBlock).removeClass("active");
   });
   $(document).mouseup(function (e) {
     if ($(parent).has(e.target).length === 0) {
@@ -29198,6 +29217,8 @@ document.querySelector(".write-review__row") &&
     ".write-review__button",
     ".write-review"
   );
+document.querySelector(".more-popup") &&
+  openClickPopup(".more-popup", ".more-btn", ".more-popup");
 
 $(".header__address").hover(
   function (e) {
@@ -29284,6 +29305,10 @@ function readFile(parent) {
     };
   };
 }
+
+$(".equipment__filter").click(function (e) {
+  $(this).next().slideToggle(100);
+});
 
 function swiperGrid(slider, slides, space, rows, prev, next) {
   new Swiper(slider, {
@@ -29388,34 +29413,75 @@ defaultSwiper(
 );
 defaultSwiper(
   ".swiper-video",
-  2.6,
+  2.9,
   120,
   true,
   true,
-  "",
-  "",
+  ".swiper-video-prev",
+  ".swiper-video-next",
   "horizontal",
   false
 );
-defaultSwiper(
-  ".swiper-recently",
-  4,
-  20,
-  false,
-  false,
-  ".swiper-recently-prev",
-  ".swiper-recently-next"
-);
 
-defaultSwiper(
-  ".swiper-similar",
-  4,
-  20,
-  false,
-  false,
-  ".swiper-similar-prev",
-  ".swiper-similar-next"
-);
+new Swiper(".swiper-recently", {
+  slidesPerView: 2.1,
+  spaceBetween: 5,
+  loop: true,
+  centeredSlides: true,
+  navigation: {
+    nextEl: "",
+    prevEl: "",
+  },
+  breakpoints: {
+    577: {
+      slidesPerView: 2.3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: "",
+        prevEl: "",
+      },
+    },
+    993: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      centeredSlides: false,
+      navigation: {
+        nextEl: ".swiper-recently-next",
+        prevEl: ".swiper-recently-prev",
+      },
+    },
+  },
+});
+
+new Swiper(".swiper-similar", {
+  slidesPerView: 2.3,
+  spaceBetween: 15,
+  loop: true,
+  centeredSlides: true,
+  navigation: {
+    nextEl: "",
+    prevEl: "",
+  },
+  breakpoints: {
+    577: {
+      slidesPerView: 2.3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: "",
+        prevEl: "",
+      },
+    },
+    993: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      centeredSlides: false,
+      navigation: {
+        nextEl: ".swiper-similar-next",
+        prevEl: ".swiper-similar-prev",
+      },
+    },
+  },
+});
 
 defaultSwiper(
   ".swiper-mounth",
