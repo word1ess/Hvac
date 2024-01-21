@@ -29426,6 +29426,10 @@ defaultSwiper(
   false
 );
 
+$(".close-btn").click(function (e) {
+  $(this).parent().removeClass("active");
+});
+
 new Swiper(".swiper-recently", {
   slidesPerView: 2.1,
   spaceBetween: 5,
