@@ -6221,6 +6221,29 @@ body {
     overflow-y: auto;
     border-radius: 20px;
   }
+  .item-info__block.active {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .section,
+  .article,
+  .yers {
+    position: relative;
+    z-index: -1;
+  }
+  .item-info {
+    position: relative;
+    z-index: 100;
+  }
+  .item-info__block, .item-info__blocks {
+    position: relative;
+    z-index: 100;
+  }
+  .item-info__block .more-btn {
+    text-align: left;
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 768px) {
   a {
