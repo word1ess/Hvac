@@ -3796,6 +3796,13 @@ a.ui-button:active,
   align-items: center;
   padding: 0.625rem;
 }
+@media only screen and (max-width: 992px) {
+  .write-review__nav .header__row {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .book__inputs .header__row {
     gap: 8px;
@@ -3829,6 +3836,13 @@ a.ui-button:active,
   flex-direction: column;
   gap: 2rem;
 }
+@media only screen and (max-width: 992px) {
+  .write-review__nav .header__menu {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .book__inputs .header__menu {
     gap: 8px;
@@ -3840,6 +3854,13 @@ a.ui-button:active,
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (max-width: 992px) {
+  .write-review__nav .header__top {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .book__inputs .header__top {
@@ -3882,6 +3903,13 @@ a.ui-button:active,
   align-items: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 992px) {
+  .write-review__nav .header__bottom {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .book__inputs .header__bottom {
     gap: 8px;
@@ -3900,6 +3928,13 @@ a.ui-button:active,
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem;
+}
+@media only screen and (max-width: 992px) {
+  .write-review__nav .header__links {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .book__inputs .header__links {
@@ -4007,6 +4042,14 @@ ul{
   gap: 1.25rem;
 }
 
+@media only screen and (max-width: 992px) {
+  .write-review__nav ul {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .book__inputs ul {
     gap: 8px;
@@ -4022,6 +4065,13 @@ ul li{
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
+}
+@media only screen and (max-width: 992px) {
+  .write-review__nav ul li {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .book__inputs ul li {
@@ -4041,6 +4091,20 @@ a,
   color: #dc5435;
   text-decoration: underline;
   font-size: 20px;
+}
+
+.close-btn {
+  display: flex;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #dc5435;
+  background: #f2994a;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  padding: 10px;
 }
 
 input,
@@ -4161,12 +4225,6 @@ textarea::placeholder,
 .custom-file video.active {
   display: flex;
   border-radius: 12px;
-  width: 6px;
-  height: 2px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
 }
 
 .close {
@@ -4265,6 +4323,14 @@ textarea::placeholder,
   font-weight: 700;
 }
 
+@media only screen and (max-width: 992px) {
+  .write-review__nav .btn {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .book__inputs .btn {
     gap: 8px;
@@ -4294,6 +4360,14 @@ textarea::placeholder,
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 992px) {
+  .write-review__nav .btn__bordered {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -4563,6 +4637,13 @@ textarea::placeholder,
   line-height: 2.25rem;
   font-weight: 700;
 }
+@media only screen and (max-width: 992px) {
+  .write-review__nav .swiper-mounth .swiper-slide {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .book__inputs .swiper-mounth .swiper-slide {
     gap: 8px;
@@ -4695,6 +4776,13 @@ textarea::placeholder,
   cursor: pointer;
   align-items: center;
   gap: 3.5rem;
+}
+@media only screen and (max-width: 992px) {
+  .write-review__nav .services__service {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .book__inputs .services__service {
@@ -4839,6 +4927,13 @@ textarea::placeholder,
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (max-width: 992px) {
+  .write-review__nav .book__date {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .book__inputs .book__date {
@@ -5572,6 +5667,13 @@ a.ui-button:active,
   justify-content: space-between;
   gap: 0.75rem;
 }
+@media only screen and (max-width: 992px) {
+  .write-review__nav .footer__row {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .book__inputs .footer__row {
     gap: 8px;
@@ -5627,6 +5729,13 @@ a.ui-button:active,
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media only screen and (max-width: 992px) {
+  .write-review__nav .footer__nav a {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .book__inputs .footer__nav a {
     gap: 8px;
@@ -5655,6 +5764,13 @@ a.ui-button:active,
   justify-content: center;
   border-radius: 9999px;
   padding: 0.75rem;
+}
+@media only screen and (max-width: 992px) {
+  .write-review__nav .footer__link {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .book__inputs .footer__link {
@@ -5755,6 +5871,58 @@ body {
   }
 }
 @media only screen and (max-width: 992px) {
+  .swiper-video-prev,
+  .swiper-video-next {
+    display: none;
+  }
+  .text-reviews__row {
+    grid-template-columns: 1fr;
+  }
+  .submenu {
+    position: static;
+    transform: none;
+    padding-left: 25px;
+  }
+  .submenu__row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  .submenu__row a {
+    line-height: 40px;
+    font-size: 18px;
+  }
+  .write-review__nav {
+    border: none;
+  }
+  .write-review__nav h2 {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #dc5435;
+  }
+  .write-review__nav button {
+    font-size: 20px;
+  }
+  .write-review__nav .flex {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+  .write-review__stars {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .write-review__stars p {
+    font-size: 18px;
+    flex: 0 0 130px;
+  }
+  .write-review__stars div {
+    font-size: 24px;
+  }
   .header__logo a {
     position: relative;
     z-index: 10;
@@ -5814,6 +5982,7 @@ body {
     z-index: 0;
     flex-direction: column;
     overflow-y: auto;
+    padding-bottom: 35%;
   }
   .header__menu.burger-active {
     transform: translate(0%, 0%);
@@ -5829,18 +5998,19 @@ body {
     flex: none;
     width: 100%;
     max-width: 100%;
+    gap: 34px;
   }
   .header__links a {
     display: block;
     flex: 1 1 auto;
+    width: 100%;
+    font-size: 18px;
   }
   .header__links a:not(:last-child)::after {
+    display: none;
+  }
+  .header__link {
     width: 100%;
-    top: auto;
-    right: auto;
-    bottom: 0px;
-    left: 0px;
-    height: 1px;
   }
   .header__top, .header__bottom {
     flex-wrap: wrap;
@@ -5851,6 +6021,19 @@ body {
   }
   .header__phone {
     flex-direction: row;
+  }
+  .services img {
+    flex: 0 0 44px;
+    height: 44px;
+  }
+  .services__text p {
+    font-size: 18px;
+  }
+  .services__text::after {
+    width: 40px;
+  }
+  .services__service:hover .services__text p {
+    transform: translate(50px, 0px);
   }
   .specifications__table table td {
     font-size: 12px;
