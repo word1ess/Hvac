@@ -90,7 +90,7 @@
             <main class="content">
                 <section class="photos section">
                     <div class="container">
-                        <div class="filter relative mb-8">
+                        <header class="filter relative mb-8">
                             <div class="filter__show flex gap-4 items-center cursor-pointer">
                                 <img src="./img/svgicons/filter.svg" alt="filter">
                                 <p class="text-lg font-bold">Filter</p>
@@ -137,8 +137,8 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="photos__row grid gap-8">
+                        </header>
+                        <main class="photos__row grid gap-8">
                             <div class="photos__photo rounded-xl relative overflow-hidden">
                                 <img src="./img/engineers/1.png" alt="1">
                             </div>
@@ -166,7 +166,16 @@
                             <div class="photos__photo rounded-xl relative overflow-hidden">
                                 <img src="./img/engineers/1.png" alt="1">
                             </div>
-                        </div>
+                        </main>
+                        <footer class="page-pagination relative flex gap-6 items-center m-0 m-auto">
+                            <div class="swiper-button-prev"></div>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <p>.</p>
+                            <p>.</p>
+                            <a href="#">16</a>
+                            <div class="swiper-button-next"></div>
+                        </footer>
                     </div>
                 </section>
                 <article class="map">
