@@ -29317,9 +29317,9 @@ function swiperGrid(slider, slides, space, rows, prev, next) {
   new Swiper(slider, {
     spaceBetween: space,
 
-    slidesPerView: 1,
+    slidesPerView: 2,
     grid: {
-      rows: 1,
+      rows: 4,
     },
 
     navigation: {
@@ -29375,7 +29375,7 @@ function defaultSwiper(
 ) {
   new Swiper(slider, {
     slidesPerView: 1,
-    spaceBetween: 15,
+    spaceBetween: 10,
     centeredSlides,
     loop,
     navigation: {
@@ -29510,16 +29510,30 @@ defaultSwiper(
   ".swiper-day-next"
 );
 
-defaultSwiper(
-  ".swiper-vertical-three",
-  3,
-  20,
-  false,
-  false,
-  ".swiper-vertical-three-prev",
-  ".swiper-vertical-three-next",
-  "vertical"
-);
+new Swiper(".swiper-vertical-three", {
+  slidesPerView: 1.5,
+  spaceBetween: 25,
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: null,
+    prevEl: null,
+  },
+  direction: "horizontal",
+  breakpoints: {
+    993: {
+      direction: "vertical",
+      slidesPerView: 3,
+      spaceBetween: 20,
+      centeredSlides: false,
+      loop: false,
+      navigation: {
+        nextEl: ".swiper-vertical-three-prev",
+        prevEl: ".swiper-vertical-three-next",
+      },
+    },
+  },
+});
 
 new Swiper(".swiper-time", {
   slidesPerView: 5,
@@ -29532,19 +29546,24 @@ new Swiper(".swiper-time", {
   },
 });
 
-// Слайдер на странице с квартитрой
-
 const itemSlider = document.querySelector(".item-slider");
 const lgContainer = document.getElementById("lg-swipper");
 const thumbsForItemSlider = document.querySelector(".thumbs-slides");
 
 if (itemSlider) {
   new Swiper(thumbsForItemSlider, {
-    spaceBetween: 15,
-    slidesPerView: 3,
-    navigation: {
-      nextEl: ".swiper-thumbs-next",
-      prevEl: ".swiper-thumbs-prev",
+    spaceBetween: 0,
+    slidesPerView: 1,
+
+    breakpoints: {
+      993: {
+        spaceBetween: 15,
+        slidesPerView: 3,
+        navigation: {
+          nextEl: ".swiper-thumbs-next",
+          prevEl: ".swiper-thumbs-prev",
+        },
+      },
     },
   });
   const slider = new Swiper(itemSlider, {
