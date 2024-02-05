@@ -29404,18 +29404,6 @@ function defaultSwiper(
 
 defaultSwiper(
   ".swiper-video",
-  2.6,
-  120,
-  true,
-  true,
-  "",
-  "",
-  "horizontal",
-  false,
-  ".swiper-video-pagination"
-);
-defaultSwiper(
-  ".swiper-video",
   2.9,
   120,
   true,

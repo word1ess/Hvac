@@ -5170,8 +5170,10 @@ textarea::placeholder,
 .videos {
   position: relative;
 }
-.videos video {
+.videos video, .videos iframe {
   max-height: 300px;
+  height: 300px;
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -5186,6 +5188,12 @@ textarea::placeholder,
   background: #252525;
 }
 
+.book textarea {
+  max-width: 900px;
+  min-height: 150px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
 .book label p {
   flex: 0 0 130px;
   padding: 20px 0px 0px;
@@ -5196,6 +5204,7 @@ textarea::placeholder,
   justify-content: flex-start;
 }
 .book__inputs {
+  margin: 0px 0px 64px;
   position: relative;
   z-index: 4;
 }
@@ -5637,6 +5646,19 @@ textarea::placeholder,
 }
 .video-reviews__link.active {
   color: #dc5435;
+}
+.video-reviews__video {
+  position: relative;
+  height: 300px;
+}
+.video-reviews__video * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0px;
+  left: 0px;
 }
 
 .text-reviews__row {
@@ -7119,16 +7141,20 @@ body {
     width: auto;
   }
   .photos {
+    position: relative;
     padding-bottom: 0px;
   }
+  .photos .block-header {
+    position: absolute;
+    top: 0px;
+  }
   .photos .swiper-grid {
-    padding: 0px 0px 60px !important;
+    padding: 60px 0px 0px !important;
     margin: 0px;
   }
   .photos .swiper-grid .swiper-button-next,
   .photos .swiper-grid .swiper-button-prev {
-    top: auto;
-    bottom: 10px;
+    top: 30px;
   }
   .item-page__row {
     gap: 40px;
@@ -7234,10 +7260,11 @@ body {
   }
   .blog-nav__row {
     display: flex;
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 0px 0px 10px;
-    gap: 32px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    row-gap: 16px;
   }
   .blog-nav__row a {
     display: block;
