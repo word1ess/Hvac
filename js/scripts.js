@@ -35017,17 +35017,33 @@ function defaultSwiper(
     },
   });
 }
-defaultSwiper(
-  ".swiper-video",
-  2.9,
-  120,
-  true,
-  true,
-  ".swiper-video-prev",
-  ".swiper-video-next",
-  "horizontal",
-  false
-);
+new Swiper(".swiper-video", {
+  slidesPerView: 2.9,
+  spaceBetween: 120,
+  centeredSlides: true,
+  loop: true,
+});
+new Swiper(".swiper-video", {
+  slidesPerView: 1.3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    prevEl: ".swiper-video-prev",
+    nextEl: ".swiper-video-next",
+  },
+  breakpoints: {
+    577: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    769: {
+      slidesPerView: 2.9,
+      spaceBetween: 120,
+    },
+  },
+});
+
 $(".close-btn").click(function (e) {
   $(this).parent().removeClass("active");
 });
@@ -35171,7 +35187,7 @@ const playersPlyr = Array.from(document.querySelectorAll("#plyrVideo"));
 
 playersPlyr.map((player) => {
   const newPlayer = new Plyr(player, {
-    controls: ["play-large", "play", "progress", "volume"],
+    controls: ["play-large", "play", "progress", "volume", "fullscreen"],
   });
   newPlayer.on("play", (e) => {
     newPlayer.fullscreen.enter();
