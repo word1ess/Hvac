@@ -6507,6 +6507,13 @@ textarea::placeholder,
   font-size: 24px;
 }
 
+.equipment__link img {
+  width: 120px;
+  height: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .section__info {
   flex: 0 1 50%;
 }
