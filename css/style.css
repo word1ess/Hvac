@@ -8741,6 +8741,73 @@ body {
   .swiper-video-pagination {
     display: block;
   }
+  .text-standart{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+@media only screen and (max-width: 450px) {
+  .blog-articles__article__big .text-standart {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 166.667% */
+  }
+}
+  .text-standart p,
+  .text-standart strong,
+  .text-standart b,
+  .text-standart a,
+  .text-standart i{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+@media only screen and (max-width: 450px) {
+  .equipment-item .text-standart p,.equipment-item 
+  .text-standart strong,.equipment-item 
+  .text-standart b,.equipment-item 
+  .text-standart a,.equipment-item 
+  .text-standart i {
+    font-size: 12px;
+  }
+   .blog-articles__info .text-standart p, .blog-articles__info 
+  .text-standart strong, .blog-articles__info 
+  .text-standart b, .blog-articles__info 
+  .text-standart a, .blog-articles__info 
+  .text-standart i {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 166.667% */
+  }
+}
+  .text-standart h2 {
+    font-size: 26px;
+  }
+  .text-standart h3 {
+    font-size: 22px;
+  }
+  .text-standart h4 {
+    font-size: 20px;
+  }
+  .text-standart ul li{
+    position: relative;
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+@media only screen and (max-width: 450px) {
+  .equipment-item .text-standart ul li {
+    font-size: 12px;
+  }
+   .blog-articles__info .text-standart ul li {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 166.667% */
+  }
+}
 }
 @media only screen and (max-width: 450px) {
   .videos iframe,
