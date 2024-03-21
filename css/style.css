@@ -8741,6 +8741,11 @@ body {
   .swiper-video-pagination {
     display: block;
   }
+  .swiper-grid img,
+  .swiper-grid video {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
   .text-standart{
     font-size: 1.5rem;
     line-height: 2rem;
