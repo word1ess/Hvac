@@ -34933,7 +34933,7 @@ function swiperGrid(slider, slides, space, rows, prev, next) {
   new Swiper(slider, {
     spaceBetween: space,
 
-    slidesPerView: 2,
+    slidesPerView: 1,
     grid: {
       rows: 4,
     },
