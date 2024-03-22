@@ -6416,6 +6416,11 @@ textarea::placeholder,
   background: #dc5435;
 }
 
+.section,
+.article {
+  z-index: -1;
+}
+
 .text-standart{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -8812,6 +8817,9 @@ body {
     line-height: 20px; /* 166.667% */
   }
 }
+  .swiper-video {
+    padding: 5% 0% 10%;
+  }
 }
 @media only screen and (max-width: 450px) {
   .videos iframe,

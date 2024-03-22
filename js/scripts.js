@@ -34725,6 +34725,13 @@ if (window.screen.width < 992) {
   $(".submenu").hover(function (e) {
     $(this).addClass("active");
   });
+
+  new Swiper(".swiper-video", {
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 2.9,
+    spaceBetween: 120,
+  });
 }
 $(".ui-slider-handle").draggable();
 // Удаление активных классов
@@ -35017,12 +35024,7 @@ function defaultSwiper(
     },
   });
 }
-new Swiper(".swiper-video", {
-  slidesPerView: 2.9,
-  spaceBetween: 120,
-  centeredSlides: true,
-  loop: true,
-});
+
 new Swiper(".swiper-video", {
   slidesPerView: 1.3,
   spaceBetween: 10,
