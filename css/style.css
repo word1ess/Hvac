@@ -8785,8 +8785,8 @@ body {
     display: block;
   }
   .swiper-grid video {
-    -o-object-fit: contain !important;
-       object-fit: contain !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
   }
   .text-standart{
     font-size: 1.5rem;
