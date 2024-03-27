@@ -7135,12 +7135,12 @@ textarea::placeholder,
   font-size: 24px !important;
 }
 .book label.checkbox p::after {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 .book label.checkbox p::before {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 
 .book__inputs {
