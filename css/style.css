@@ -7131,7 +7131,7 @@ textarea::placeholder,
   flex: none;
   justify-content: flex-start;
   align-items: center;
-  padding: 0;
+  padding: 0 !important;
   font-size: 24px !important;
 }
 .book label.checkbox p::after {
