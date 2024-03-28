@@ -34703,29 +34703,13 @@ $(".header__burger").click(function name(event) {
   $(".header__burger, .header__menu").toggleClass("burger-active");
 });
 $(".submenu").prev().addClass("has-submenu");
-if (window.screen.width < 992) {
-  $(".block__title").click(function name(event) {
-    $(this).toggleClass("footer-active").next().slideToggle(300);
-  });
-  $(".has-submenu").click(function (e) {
-    $(this).toggleClass("active");
-    $(this).next().toggleClass("active");
-  });
-} else {
-  $(".header__link").hover(
-    function (e) {
-      $(".has-submenu").addClass("active");
-      $(".has-submenu").next().addClass("active");
-    },
-    function (e) {
-      $(".has-submenu").removeClass("active");
-      $(".has-submenu").next().removeClass("active");
-    }
-  );
-  $(".submenu").hover(function (e) {
-    $(this).addClass("active");
-  });
-}
+
+$(".header__arrow").click(function (e) {
+  $(this).prev().toggleClass("active");
+  $(this).next().toggleClass("active");
+  $(this).toggleClass("active");
+});
+
 new Swiper(".swiper-video", {
   centeredSlides: true,
   loop: true,
@@ -34797,6 +34781,20 @@ function clickForCustomSelect(parent) {
       body.classList.remove("active");
     });
   });
+}
+
+let valueOfPriceEquipment = Array.from(
+  document.querySelectorAll(".item-page__table tr")
+);
+valueOfPriceEquipment[0] &&
+  valueOfPriceEquipment.forEach((value, i, arr) => {
+    clickForTableValue(value, arr);
+  });
+function clickForTableValue(value, values) {
+  value.onclick = function () {
+    removeActiveClass(values, "active");
+    this.classList.add("active");
+  };
 }
 const customSelects = Array.from(document.querySelectorAll(".custom-select"));
 customSelects[0] &&
